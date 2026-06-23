@@ -102,7 +102,10 @@ function heartPoint(t) {
     };
 }
 
-const scale = 18;
+const scale =
+    window.innerWidth < 600
+        ? 12
+        : 18;
 
 for (let i = 0; i < 2500; i++) {
     const t = Math.random() * Math.PI * 2;
